@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import useGeolocation from "./hooks/vx-geolocation";
 
-const { position, error } = useGeolocation({ enableHighAccuracy: true });
+const { position, error } = useGeolocation();
 </script>
 
 <template>
