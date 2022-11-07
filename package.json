@@ -21,6 +21,20 @@
     "vue-use",
     "vue-geolocation"
   ],
+  "license": "MIT",
+  "author": {
+    "name": "Bence Hornyák",
+    "email": "sir.bence15@gmail.com",
+    "url": "https://bencehornyak.me/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benceHornyak/vx-geolocation"
+  },
+  "bugs": {
+    "url": "https://github.com/benceHornyak/vx-geolocation/issues"
+  },
+  "homepage": "https://github.com/benceHornyak/vx-geolocation#readme",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
