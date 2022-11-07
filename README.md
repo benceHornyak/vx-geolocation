@@ -1,25 +1,31 @@
 # vx-geolocation
 
-This template should help get you started developing with Vue 3 in Vite.
+> Tracks user's location via reactive variables :world_map:
 
-## Recommended IDE Setup
+## Install
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```sh
+npm install vx-geolocation
+```
 
-## Type Support for `.vue` Imports in TS
+## Usage
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Using this tiny package is fairly simple:
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+```typescript
+import { useGeolocation } from "vx-geolocation";
+...
+// then you can call the hook
+const { position, error } = useGeolocation();
+```
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Documentation
 
-## Customize configuration
+Under the hood a Browser API is used to get the location data (See: [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API) for more info).
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The hook returns two reactive variables: `positions` and `error`.
+
+There is a small `App.vue` file so you can play with it easily locally.
 
 ## Project Setup
 
@@ -37,12 +43,6 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
